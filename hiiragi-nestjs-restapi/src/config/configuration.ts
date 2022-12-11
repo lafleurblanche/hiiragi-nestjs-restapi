@@ -17,7 +17,7 @@ export function configuration(): Configuration {
   return {
     env: env.NODE_ENV,
     nest: {
-      port: parseInt(env.PORT ?? '', 10) || 3001,
+      port: parseInt(env.PORT ?? '', 10) || 45001,
     },
     cookie: {
       secret: env.COOKIE_SECRET,
