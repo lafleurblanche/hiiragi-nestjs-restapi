@@ -9,7 +9,9 @@ import { validateEnv } from 'src/config/validate-env';
 /* const */
 import { DBConnectVal } from 'src/const/dbconnval';
 import { HiiragiRW01Model } from './models/hiiragi/hiiragi-rw01.model';
+import { HiiragiRW02Model } from './models/hiiragi/hiiragi-rw02.model';
 import { HiiragiRW01Module } from './modules/hiiragi-rw01.module';
+import { HiiragiRW02Module } from './modules/hiiragi-rw02.module';
 
 @Module({
   imports: [
@@ -22,6 +24,7 @@ import { HiiragiRW01Module } from './modules/hiiragi-rw01.module';
       database: DBConnectVal.DATABASE_NAME,
       entities: [
         HiiragiRW01Model,
+        HiiragiRW02Model,
       ],
       synchronize: false,
     }),
@@ -32,6 +35,7 @@ import { HiiragiRW01Module } from './modules/hiiragi-rw01.module';
       validate: validateEnv,
     }),
     HiiragiRW01Module,
+    HiiragiRW02Module,
   ],
   controllers: [],
   providers: [],
