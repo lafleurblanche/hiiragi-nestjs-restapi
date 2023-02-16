@@ -18,7 +18,7 @@ import { HiiragiRW02Module } from './modules/hiiragi-rw02.module';
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: DBConnectVal.DATABASE_HOST,
-      port: 5432,
+      port: DBConnectVal.DATABASE_PORT,
       username: DBConnectVal.DATABASE_USERNAME,
       password: DBConnectVal.DATABASE_PASSWORD,
       database: DBConnectVal.DATABASE_NAME,
