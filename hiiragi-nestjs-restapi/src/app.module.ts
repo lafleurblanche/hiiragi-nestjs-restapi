@@ -2,10 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-/* config */
-import { configuration } from 'src/config/configuration';
-import { validateEnv } from 'src/config/validate-env';
-
 /* const */
 import { DBConnectVal } from 'src/const/dbconnval';
 import { HiiragiRW01Model } from './models/hiiragi/hiiragi-rw01.model';
@@ -31,8 +27,7 @@ import { HiiragiRW02Module } from './modules/hiiragi-rw02.module';
     ConfigModule.forRoot({
       isGlobal: true,
       cache: true,
-      load: [configuration],
-      validate: validateEnv,
+      load: [],
     }),
     HiiragiRW01Module,
     HiiragiRW02Module,
